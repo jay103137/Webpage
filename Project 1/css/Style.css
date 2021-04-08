@@ -1,0 +1,292 @@
+/* 
+    Jacky Wu
+*/
+
+/* Navgation bar setting*/
+.nav{
+    text-align: center;
+    background-image: url(../img/Header.png);
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    padding: 1%;
+}
+
+ul {
+    display: inline;
+}
+
+.nav a{
+    text-decoration:none;
+    
+    color: aquamarine;
+    padding: 1% 2%;
+    background: transparent;
+    border-left: 12px solid aquamarine;
+    border-right: 12px solid aquamarine;
+    border-top: 12px solid beige;
+    border-bottom: 12px solid beige;
+    border-radius: 25px;
+    outline: none;
+}
+
+/* Body setting (and setting for div) */
+body{
+    background:linear-gradient(to right,  lightgoldenrodyellow 50% , lightgreen 90%);
+}
+
+.AboutBody{
+    background-image: url(../img/back.jpg);
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    overflow:no-display;
+}
+
+.main{
+    margin: 5%;
+}
+
+/* Sakura animation setting*/
+@keyframes Saku{
+    0%{
+        transform: translateY(25vh);
+        opacity:0;
+    }
+    50%{
+
+        opacity:50;
+    }
+    70%{
+
+        opacity:100;
+    }
+    100%{
+        transform: translateY(100vh);
+        opacity:0;
+    }
+
+}
+
+.sakura img{
+    width: 30px;
+    animation: Saku 7s linear infinite;
+    z-index: 30;
+}
+
+.sakura{
+    width: 95%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: absolute;
+    top:-10%;
+}
+
+.sakura img:nth-child(1){
+    animation-delay: 2s;
+}
+.sakura img:nth-child(2){
+    animation-delay: 4s;
+}
+.sakura img:nth-child(3){
+    animation-delay: 1s;
+}
+.sakura img:nth-child(4){
+    animation-delay: 3.5s;
+}
+.sakura img:nth-child(5){
+    animation-delay: 3s;
+}
+.sakura img:nth-child(6){
+    animation-delay: 1.5s;
+}
+
+/* Clock setting*/
+*,*::after,*::before{
+    box-sizing:border-box;
+    font-family: Gotham Rounded,sans-serif;
+}
+.clock{
+    box-sizing:border-box;
+    display:flex;
+}
+/* clock 1 */
+.c1{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 50%;
+    border: 2px solid blue;
+    position: relative;
+}
+.c1 .number{
+    --rotation:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));    
+    font-size: 2rem;
+}
+.c1 .number1{--rotation:30deg;}
+.c1 .number2{--rotation:60deg;}
+.c1 .number3{--rotation:90deg;}
+.c1 .number4{--rotation:120deg;}
+.c1 .number5{--rotation:150deg;}
+.c1 .number6{--rotation:180deg;}
+.c1 .number7{--rotation:210deg;}
+.c1 .number8{--rotation:240deg;}
+.c1 .number9{--rotation:270deg;}
+.c1 .number10{--rotation:300deg;}
+.c1 .number11{--rotation:330deg;}
+
+.c1 .hand{
+    --rotation:0;   
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid silver;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    transform-origin: bottom;
+    z-index: 20;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+}
+
+.c1::after{
+    content: '';
+    position: absolute;
+    background-color: silver;
+    z-index: 21;
+    width: 15px;
+    height: 15px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.c1 .hand.h{
+    width: 12px;
+    height: 35%;
+    background-color: rgba(0, 10, 110, .1);
+}
+
+.c1 .hand.m{
+    width: 6px;
+    height: 40%;
+    background-color: rgba(110, 10, 0, .1);
+}
+
+.c1 .hand.s{
+    width: 2px;
+    height: 45%;
+    background-color: rgba(110, 0, 10, .1);
+}
+
+/* clock 2 */
+.clock2-background{
+    width: 100%;
+    height: auto;
+}
+
+.c2{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(192, 215, 192, .8);
+    border-radius: 30%;
+    border: 5px solid gold;
+    position: relative;
+}
+
+.c2 .hand{
+    --rotation:0;   
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid silver;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    transform-origin: bottom;
+    z-index: 20; 
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+}
+
+.c2::after{
+    content: '';
+    position: absolute;
+    background-color: silver;
+    z-index: 21;
+    width: 15px;
+    height: 15px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+/* make this clock 5 hour early by - 150deg at the end*/
+.c2 .hand.h{
+    width: 12px;
+    height: 35%;
+    background-color: rgba(0, 20, 220, .5);
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg - 150deg));
+}
+
+.c2 .hand.m{
+    width: 6px;
+    height: 40%;
+    background-color: rgba(220, 20, 0, .5);
+}
+
+.c2 .hand.s{
+    width: 2px;
+    height: 45%;
+    background-color: rgba(220, 0, 10, .5);
+}
+
+/*degital clock*/
+
+.dClock{
+    margin: 0;
+    width: 100%;
+}
+
+.degiClock{
+    width: 100%;
+    height: 1080px;
+    position: relative;
+}
+
+.digital-background{
+    width: 100%;
+    height: auto;
+    border-radius: 20%;
+    border: 20px solid gold;
+}
+
+.rtClock{
+    width:50%;
+    margin-top: 5%;
+    position: absolute;
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+    color:gold;
+    font-family: 'Caveat',sans-serif;
+    letter-spacing: 10px;
+}
+
+#Digital{
+    width: 85%;
+    position: absolute;
+    font-size:8vw;
+    color:gold;
+    text-align: right;
+    font-family: 'Caveat',sans-serif;
+    margin-top:15%;
+}
+
+

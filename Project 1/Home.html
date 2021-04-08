@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+Jacky Wu
+-->
+<html>
+
+<head>
+    <title>Jacky Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/Style.css">
+    <script defer src="js/Clock.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+
+<body onload="realtimeClock()">
+
+    <div class="nav">
+        <ul>
+            <h1>
+                <a href="Home.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Reference.html">Reference</a>
+            </h1>
+        </ul>
+    </div>
+
+    <div class="sakura">
+        <a href="img/sakura.png"> <img src="img/sakura.png"> </a>
+        <img src="img/sakura.png">
+        <img src="img/sakura.png">
+        <img src="img/sakura.png">
+        <img src="img/sakura.png">
+        <img src="img/sakura.png">
+    </div>
+
+    <div class="main">
+        <h1>Welcome to the Home Page for Jacky's Website</h1>
+        <h2>Two Way to display the times as Clock</h2>
+        <h3>Analog Clock:</h3>
+        <div class="clock">
+            <li>Clock 1</li>
+            <div class="c1">
+                <div class="hand h" data-hour-hand></div>
+                <div class="hand m" data-minute-hand></div>
+                <div class="hand s" data-second-hand></div>
+                <div class="number number1">1</div>
+                <div class="number number2">2</div>
+                <div class="number number3">3</div>
+                <div class="number number4">4</div>
+                <div class="number number5">5</div>
+                <div class="number number6">6</div>
+                <div class="number number7">7</div>
+                <div class="number number8">8</div>
+                <div class="number number9">9</div>
+                <div class="number number10">10</div>
+                <div class="number number11">11</div>
+                <div class="number number12">12</div>
+            </div>
+
+            <hr>
+
+            <li>Clock 2</li>
+            <div class="c2">
+                <div class="hand h" data-hour-hand2></div>
+                <div class="hand m" data-minute-hand2></div>
+                <div class="hand s" data-second-hand2></div>
+                <img class="clock2-background" src="img/clock.png">
+            </div>
+        </div>
+
+        <hr>
+        <h3>Digital Clock:</h3>
+        <div class="dClock">
+            <div class="digiClock">
+                <h1 class="rtClock">Simple digital Clock:</h1>
+                <div id="Digital"></div>
+                <img class="digital-background" src="img/Digital.png">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
